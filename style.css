@@ -1,0 +1,236 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, , em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнул€ем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устран€ем отступы между €чейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию дл€ элементов форм (в частности дл€ checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 				/* убираем внутренние отступы дл€ текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	color: #606060;
+	text-align: left;
+	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+	min-height:100%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+a:focus, a:active {
+	color: #c83867;
+	text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+img{
+
+	max-width:100%;
+}
+.clear{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* ------------------------- haeder --------------------------*/
+body{ 
+	background: url(images/bagkround.jpg);
+}
+.block-main-center{
+	margin: 0 auto;
+	max-width: 1000px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.9);
+}
+.header-top{
+	background: url(images/header.png);
+	max-width: 1000px;
+	height: 175px;
+}
+.block-header{
+	float: right;
+	color: #4ea8bd;
+}
+.header-bottom{
+	max-width: 1000px;
+	/*height: 235px;*/
+	margin-bottom: -10px;
+}
+.block-nav{
+	float: right;
+	padding-right: 45px
+}
+
+._content{
+	 background: #303030; 
+}
+ 
+ /*
+ ._content{
+	 background: #343434; 
+	 overflow: hidden;
+	 max-width: 1000px;
+     margin: 0 auto;
+ }
+
+	.center-block-main{
+		margin: 0 auto; 
+		max-width: 1000px;
+		background: #343434;
+	}
+	.menu{
+	
+	}
+	.menu li{
+		float: left; 
+		font-weight: 600;
+	}
+
+	.menu li a{
+		font-size: 12px;
+		color: #fff; 
+		text-decoration: none; 
+		padding: 15px 35px;
+		display: block; 
+		border: 1px solid transparent;
+	}
+	.menu li a:hover{
+
+
+	}
+ */
+ .top-menu{
+	 background-color: #303030;
+ }
+ nav.top-menu ul{
+	background-color: #303030;
+	margin: 0;
+    border-bottom: 1px solid #000;
+	padding: 7px 0 0 50px;
+ }
+ .top-menu li{
+	list-style:none;        /*Убираем маркер*/	
+	display:inline-block;   /*Выстраиваем пункты в ряд*/
+	background: #ccc;/*Цвет фона для пункта*/
+	position:relative;
+}
+.top-menu li:hover{
+	background: #303030;     /*Цвет фона при наведение на пункт*/
+}
+.top-menu li a{
+	color:#fff;              /*Цвет шрифта в пункте*/
+	padding:15px 20px;        /*Отступы для пункта*/	
+	text-decoration:none;    /*Убираем подчеркивание*/	
+	display:block;
+	background: #303030;
+}
+.top-menu li ul{
+	display:none;            /*Прячем выпадающее меню*/
+	position:absolute;
+	padding-left: 0px;
+	width:120px;             /*Ширина выпадающего меню*/
+	padding-top: 0px;         /*Отступ сверху у выпадающего меню*/
+}
+.top-menu li:hover ul{
+	display:block;           /*Показываем выпадающее меню при наведение*/
+	left:0px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 1)
+}
+
+
+.block-main{
+	max-width: 1000px;
+	height: 545px;
+	background-color: #fff;
+	border-bottom: 2px solid #031d28
+}
+article{
+	float: left;
+	width: 220px;
+	height: 100%;
+	background-color: #edeef0;
+	color: #424c43;
+	border-right: 2px solid #c7cacf; 
+}
+article p{
+	top: 1em; 
+	padding-left: 15px;
+    padding-right: 0px;	
+}
+article h3{
+	top: 1em;
+}
+aside {
+	float: right;
+	width: 220px;
+	height: 100%;
+	background-color: #edeef0;
+	color: #424c43;
+	border-left: 2px solid #c7cacf;
+}
+aside p{
+	top: 1em; 
+	padding-left: 15px
+}
+aside h3{
+	top: 1em; 
+}
+footer{
+	text-align: center;   
+}
+h6{
+	color: #fff;
+	font-weight: 600;
+	margin: 0.7em;
+}
